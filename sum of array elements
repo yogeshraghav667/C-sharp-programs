@@ -1,0 +1,89 @@
+using System;
+
+namespace Array_Foramtion
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int choice;
+            int size;
+            int sum = 0;
+
+            Console.WriteLine("Choose the araray you want to create:-");
+            Console.WriteLine();
+            Console.WriteLine("1.1-D array");
+            Console.WriteLine("2.2-D array");
+            Console.WriteLine();
+
+            choice = Convert.ToInt32(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                Console.Write("Enter the size of array:");
+                size = Convert.ToInt32(Console.ReadLine());
+                int[] array = new int[size];
+                for (int i = 0; i < size; i++)
+                {
+                    array[i] = Convert.ToInt32(Console.ReadLine());
+                }
+                Console.Write("The sum of array : [");
+                for (int i = 0; i < size; i++)
+                {
+                    Console.Write(array[i] + " ");
+                }
+                Console.Write("] is = ");
+                for(int i = 0; i < size; i++)
+                {
+                    sum = sum + array[i];
+                }
+                Console.Write(sum);
+            }
+            else if (choice == 2)
+            {
+                int rows;
+                int cols;
+
+                Console.Write("Enter no. of rows:");
+                rows = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter no. of columns:");
+                cols = Convert.ToInt32(Console.ReadLine());
+                int[,] MATRIX = new int[rows, cols];
+
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < cols; j++)
+                    {
+                        Console.WriteLine("Enter ({0},{1})", i, j);
+                        MATRIX[i, j] = Convert.ToInt32(Console.ReadLine());
+                    }
+                }
+                Console.WriteLine();
+                Console.Write("The sum of the array :-");
+                Console.WriteLine();
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < cols; j++)
+                    {
+                        Console.Write(MATRIX[i, j] + " ");
+                    }
+                    Console.WriteLine("");
+                }
+                for(int i = 0; i < cols; i++)
+                {
+                    for(int j = 0; j < rows; j++)
+                    {
+                        sum = sum + MATRIX[i, j];
+                    }
+                }
+                Console.WriteLine(sum);
+            }
+            else
+            {
+                Console.WriteLine("Unexpected input....");
+            }
+            Console.ReadLine();
+        }
+    }
+}
