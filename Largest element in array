@@ -1,0 +1,41 @@
+using System;
+
+namespace LargestElement
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int size;
+            Console.Write("Enter the size of array : ");
+            size = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[size];
+            int k = array[0];
+
+            for (int i = 0; i < size; i++)
+            {
+                Console.WriteLine("Enter {0}th element : ",i);
+                array[i] = Convert.ToInt32(Console.ReadLine()); 
+            }
+
+            Console.Write("Array = [ ");
+
+            for(int i = 0; i < size; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+
+            Console.WriteLine("]");
+
+            for(int i = 0;i < size; i++){
+                if (array[i] > k)
+                {
+                    k = array[i];
+                }
+                }
+            Console.WriteLine();
+            Console.WriteLine("Greatest element = {0}", k);
+            Console.ReadLine();
+        }
+    }
+}
