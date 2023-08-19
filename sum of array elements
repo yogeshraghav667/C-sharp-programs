@@ -1,6 +1,6 @@
 using System;
 
-namespace Array_Foramtion
+namespace ArraySum
 {
     internal class Program
     {
