@@ -1,0 +1,34 @@
+using System;
+
+namespace Assignment2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            
+            MathHelper.CalculateAverage(numbers);
+
+        }
+    }
+    static class MathHelper
+    {
+        public static void CalculateAverage(int[] numbers)
+        {
+            int sum = 0;
+            if (numbers.Length == 0 & numbers == null)
+            {
+                Console.WriteLine("cannot find the average......");
+            }
+            else
+            {
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                     sum = sum + numbers[i];
+                }
+                Console.WriteLine("The average of the given numbers is {0}", sum/numbers.Length);
+            }
+        }
+    }
+}
