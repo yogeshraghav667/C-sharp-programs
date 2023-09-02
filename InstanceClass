@@ -1,0 +1,30 @@
+using System;
+
+namespace Assignment2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee employe1 = new Employee();
+            employe1.Name = "Yogesh Singh Raghav";
+            employe1.Age = 23;
+            employe1.Salary = 100000;
+
+            employe1.DisplayDetails();
+            Console.Read();
+        }
+    }
+    class Employee
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public double Salary { get; set; }
+
+        public void DisplayDetails()
+        {
+            Console.WriteLine("My name is {0} and i'am {1} years old. I Work in XYZ comapny and my salary is {2}.", Name, Age, Salary);
+
+        }
+    }
+}
