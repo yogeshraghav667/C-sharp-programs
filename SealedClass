@@ -1,0 +1,39 @@
+using System;
+
+public class Vehicle
+{
+    public void StartEngine()
+    {
+        Console.WriteLine("Engine started");
+    }
+
+    public void StopEngine()
+    {
+        Console.WriteLine("Engine stopped");
+    }
+}
+public sealed class Car : Vehicle
+{
+    public void Drive()
+    {
+        Console.WriteLine("Car is driving");
+    }
+}
+public class SportsCar : Car
+{
+    public void Race()
+    {
+        Console.WriteLine("Sports car is racing");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Car myCar = new Car();
+        myCar.StartEngine();
+        myCar.Drive();
+        myCar.StopEngine();
+    }
+}
