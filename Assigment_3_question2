@@ -1,0 +1,29 @@
+using System;
+
+public class ClassA
+{
+    private int privateField = 42;
+
+    public int GetPrivateFieldValue()
+    {
+        return privateField;
+    }
+}
+public class ClassB
+{
+    public void AccessPrivateFieldInClassA()
+    {
+        ClassA objA = new ClassA();
+        int value = objA.GetPrivateFieldValue();
+        Console.WriteLine("Accessed private field in ClassA from ClassB: " + value);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        ClassB objB = new ClassB();
+        objB.AccessPrivateFieldInClassA();
+    }
+}
