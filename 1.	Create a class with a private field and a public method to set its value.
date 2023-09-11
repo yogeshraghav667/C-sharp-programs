@@ -20,11 +20,7 @@ class Program
     static void Main()
     {
         MyClass obj = new MyClass();
-
-        // Setting the value of the private field using the public method
         obj.SetPrivateField(42);
-
-        // Getting the value of the private field using the public method
         int value = obj.GetPrivateField();
         Console.WriteLine(value); // Output: 42
     }
