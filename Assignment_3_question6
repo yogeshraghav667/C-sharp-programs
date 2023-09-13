@@ -1,17 +1,13 @@
 using System;
 
-// Create a base class with a public property
 public class MyBaseClass
 {
     public int MyProperty { get; set; }
 }
-
-// Derive a class from MyBaseClass
 public class DerivedClass : MyBaseClass
 {
     public void AccessProperty()
     {
-        // Access the public property from the derived class
         Console.WriteLine($"Value of MyProperty from DerivedClass: {MyProperty}");
     }
 }
@@ -20,13 +16,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create an instance of DerivedClass
         DerivedClass derivedObj = new DerivedClass();
-
-        // Set the property value through the base class instance
         derivedObj.MyProperty = 42;
-
-        // Access the property through the derived class
         derivedObj.AccessProperty();
     }
 }
