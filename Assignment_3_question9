@@ -1,0 +1,25 @@
+using System;
+public class MyBaseClass
+{
+    protected void ProtectedMethod()
+    {
+        Console.WriteLine("This is a protected method.");
+    }
+}
+public class DerivedClass : MyBaseClass
+{
+    public void AccessProtectedMethod()
+    {
+        Console.WriteLine("DerivedClass is calling the protected method:");
+        ProtectedMethod();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        DerivedClass derivedObj = new DerivedClass();
+        derivedObj.AccessProtectedMethod();
+    }
+}
