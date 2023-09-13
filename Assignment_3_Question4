@@ -1,0 +1,28 @@
+using System;
+
+public class MyBaseClass
+{
+    protected int protectedField = 42;
+
+    protected void ProtectedMethod()
+    {
+        Console.WriteLine("This is a protected method.");
+    }
+}
+public class DerivedClass : MyBaseClass
+{
+    public void AccessProtectedMembers()
+    {
+        Console.WriteLine($"Accessing protectedField from DerivedClass: {protectedField}");
+        ProtectedMethod();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        DerivedClass derivedObj = new DerivedClass();
+        derivedObj.AccessProtectedMembers();
+    }
+}
