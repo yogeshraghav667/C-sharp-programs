@@ -1,0 +1,28 @@
+using System;
+
+public class MyClass
+{
+    private void PrivateMethod()
+    {
+        Console.WriteLine("This is a private method.");
+    }
+
+    public void PublicMethod()
+    {
+        Console.WriteLine("This is a public method.");
+        
+        // Call the private method from within the public method
+        PrivateMethod();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        MyClass myObject = new MyClass();
+
+        // Call the public method, which in turn calls the private method
+        myObject.PublicMethod();
+    }
+}
