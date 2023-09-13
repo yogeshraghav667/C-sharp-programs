@@ -1,5 +1,4 @@
 using System;
-
 public class MyBaseClass
 {
     protected int protectedField = 42;
